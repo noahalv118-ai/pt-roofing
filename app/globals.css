@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --navy: #0F172A;
+  --white: #FFFFFF;
+  --charcoal: #334155;
+  --orange: #F97316;
+  --orange-dark: #EA6C0A;
+  --slate: #64748B;
+  --light-bg: #F8FAFC;
+  --border: #E2E8F0;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--white);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulseRing {
+  0%,100% { box-shadow: 0 0 0 0 rgba(249,115,22,.45); }
+  50%      { box-shadow: 0 0 0 14px rgba(249,115,22,0); }
+}
+
+.anim-fade-up  { animation: fadeUp  .7s ease both; }
+.anim-fade-in  { animation: fadeIn  .6s ease both; }
+.d100 { animation-delay: .10s; }
+.d200 { animation-delay: .20s; }
+.d300 { animation-delay: .30s; }
+.d400 { animation-delay: .40s; }
+
+.hero-overlay {
+  background: linear-gradient(135deg,rgba(15,23,42,.93) 0%,rgba(15,23,42,.72) 55%,rgba(249,115,22,.12) 100%);
+}
+.gradient-text {
+  background: linear-gradient(90deg,#F97316,#FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-solid {
+  background: rgba(15,23,42,.97) !important;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 28px rgba(0,0,0,.28);
+}
+
+.service-card { transition: transform .3s ease, box-shadow .3s ease; }
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 24px 56px rgba(15,23,42,.14); }
+
+.benefit-card { transition: transform .3s ease, border-color .3s ease; }
+.benefit-card:hover { transform: translateY(-4px); border-color: rgba(249,115,22,.5) !important; }
+
+.gallery-item { transition: transform .35s ease; }
+.gallery-item:hover { transform: scale(1.04); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+.f-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+.f-input:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249,115,22,.12);
+}
+
+.modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(15,23,42,.82);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+
+.float-cta {
+  position: fixed; bottom: 24px; right: 24px; z-index: 900;
+  animation: pulseRing 2.4s infinite;
+}
+
+.sec-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.display-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .03em;
+  line-height: .96;
+}
