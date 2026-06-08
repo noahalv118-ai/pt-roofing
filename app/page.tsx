@@ -78,10 +78,10 @@ const BENEFITS = [
 ];
 
 const TESTIMONIALS = [
-  { initials: "SM", name: "Sarah Mitchell",    loc: "Austin, TX",       project: "Roof Replacement",     text: "PT Roofing and Renovations exceeded our expectations. The roof replacement was completed quickly and professionally. The crew respected our property throughout and the final result is absolutely stunning." },
-  { initials: "JR", name: "James Rodriguez",   loc: "Round Rock, TX",   project: "Interior Remodeling",  text: "Hired PT for a complete kitchen and bathroom remodel. Communication was excellent from first call to final walkthrough. The craftsmanship is genuinely top-notch — we'll use them for every project going forward." },
-  { initials: "LT", name: "Linda Thompson",    loc: "Cedar Park, TX",   project: "Siding & Painting",    text: "Our home's exterior needed serious attention after years of wear. PT gave us an honest estimate and delivered exactly what they promised. The transformation to our curb appeal is remarkable." },
-  { initials: "MF", name: "Mark & Dana Foster",loc: "Pflugerville, TX", project: "Patio Cover & Windows",text: "The new patio cover and energy-efficient windows have changed how we live in our home. AC bills dropped noticeably within the first month. PT was professional, clean, punctual, and a pleasure to work with." },
+  { initials: "SM", name: "Sarah Mitchell",    loc: "Austin, TX",       project: "Roof Replacement",     text: "Horizon Home Remodeling  exceeded our expectations. The roof replacement was completed quickly and professionally. The crew respected our property throughout and the final result is absolutely stunning." },
+  { initials: "JR", name: "James Rodriguez",   loc: "Round Rock, TX",   project: "Interior Remodeling",  text: "Hired HR for a complete kitchen and bathroom remodel. Communication was excellent from first call to final walkthrough. The craftsmanship is genuinely top-notch — we'll use them for every project going forward." },
+  { initials: "LT", name: "Linda Thompson",    loc: "Cedar Park, TX",   project: "Siding & Painting",    text: "Our home's exterior needed serious attention after years of wear. HR gave us an honest estimate and delivered exactly what they promised. The transformation to our curb appeal is remarkable." },
+  { initials: "MF", name: "Mark & Dana Foster",loc: "Pflugerville, TX", project: "Patio Cover & Windows",text: "The new patio cover and energy-efficient windows have changed how we live in our home. AC bills dropped noticeably within the first month. HR was professional, clean, punctual, and a pleasure to work with." },
 ];
 
 const PROCESS = [
@@ -100,7 +100,7 @@ const AREAS = [
 
 const FAQS = [
   { q: "How soon can you start?",                        a: "We schedule free inspections within 2–3 business days and typically begin projects within 1–2 weeks of contract signing." },
-  { q: "Are you licensed and insured?",                  a: "Yes — PT Roofing and Renovations is fully licensed in Texas and carries both general liability and workers' compensation insurance." },
+  { q: "Are you licensed and insured?",                  a: "Yes — Horizon Home Remodeling  is fully licensed in Texas and carries both general liability and workers' compensation insurance." },
   { q: "Do you offer financing?",                        a: "We partner with financing providers to offer flexible payment plans. Ask about available options during your free estimate." },
   { q: "Do you work with insurance claims?",             a: "Absolutely. We have extensive experience with insurance adjusters, will document all damage, and help guide you through the entire claims process." },
   { q: "How long does a roof replacement take?",         a: "Most residential replacements are completed in 1–2 days. Complex or larger projects may require additional time — we provide a clear timeline upfront." },
@@ -277,11 +277,11 @@ export default function Page() {
           {/* logo */}
           <a href="#" className="flex items-center gap-3 shrink-0">
             <div className="w-11 h-11 rounded-xl overflow-hidden bg-white shadow flex items-center justify-center">
-              <Image src="/ptlogo.jpg" alt="PT Roofing logo" width={44} height={44} className="object-cover" />
+              <Image src="/hrlogo.jpg" alt="Horizon Remodeling logo" width={44} height={44} className="object-cover" />
             </div>
             <div>
-              <p className="display-heading text-white text-xl leading-none">PT Roofing</p>
-              <p className="text-orange-400 text-[10px] font-semibold tracking-widest">& RENOVATIONS</p>
+              <p className="display-heading text-white text-xl leading-none">Horizon Home</p>
+              <p className="text-orange-400 text-[10px] font-semibold tracking-widest">REMODELING</p>
             </div>
           </a>
 
@@ -419,7 +419,7 @@ export default function Page() {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-                alt="PT Roofing team at work"
+                alt="Horizon Remodeling team at work"
                 className="w-full h-[480px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/55 to-transparent rounded-2xl" />
@@ -435,7 +435,7 @@ export default function Page() {
           <div className="reveal">
             <SectionHeader label="About Us" title="Your Trusted Home Improvement Partner" />
             <p className="text-[#334155] text-lg leading-relaxed mb-5">
-              PT Roofing and Renovations is committed to helping homeowners protect and enhance their
+              Horizon Home Remodeling  is committed to helping homeowners protect and enhance their
               biggest investment. Our team delivers quality workmanship, transparent communication,
               and lasting results on every project — no exceptions.
             </p>
@@ -508,7 +508,7 @@ export default function Page() {
       ══════════════════════════════════════════ */}
       <section className="py-24 bg-[#0F172A]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader center light label="Why Choose Us" title="The PT Difference" />
+          <SectionHeader center light label="Why Choose Us" title="The HR Difference" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {BENEFITS.map(({ Icon, title, desc }, i) => (
@@ -742,7 +742,7 @@ export default function Page() {
 
             {[
               { Icon: Phone, label: "Phone",        content: <a href="tel:+15125550100" className="text-[#334155] hover:text-orange-500 transition-colors text-lg">(512) 555-0100</a> },
-              { Icon: Mail,  label: "Email",         content: <a href="mailto:info@ptroofing.com" className="text-[#334155] hover:text-orange-500 transition-colors text-lg">info@ptroofing.com</a> },
+              { Icon: Mail,  label: "Email",         content: <a href="mailto:info@HRroofing.com" className="text-[#334155] hover:text-orange-500 transition-colors text-lg">info@HRroofing.com</a> },
               { Icon: MapPin,label: "Service Area",  content: <span className="text-[#334155] text-lg">Greater Austin Area, Texas</span> },
               { Icon: Clock, label: "Business Hours",content: <><p className="text-[#334155]">Mon–Fri: 7 am – 6 pm</p><p className="text-[#334155]">Sat: 8 am – 4 pm</p></> },
             ].map(({ Icon, label, content }) => (
@@ -821,10 +821,10 @@ export default function Page() {
             <div>
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-11 h-11 rounded-xl overflow-hidden bg-white flex items-center justify-center">
-                  <Image src="/ptlogo.jpg" alt="PT Roofing" width={44} height={44} className="object-cover" />
+                  <Image src="/hrlogo.jpg" alt="Horizon Remodeling" width={44} height={44} className="object-cover" />
                 </div>
                 <div>
-                  <p className="display-heading text-xl leading-none">PT Roofing</p>
+                  <p className="display-heading text-xl leading-none">Horizon Remodeling</p>
                   <p className="text-orange-400 text-[10px] font-semibold tracking-widest">& RENOVATIONS</p>
                 </div>
               </div>
@@ -881,7 +881,7 @@ export default function Page() {
               <h4 className="text-white font-bold text-base uppercase tracking-wider mb-5" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Contact</h4>
               <ul className="space-y-4 mb-6">
                 <li className="flex gap-3"><Phone size={15} className="text-orange-400 mt-0.5 shrink-0" /><a href="tel:+15125550100" className="text-slate-400 hover:text-white text-sm transition-colors">(512) 555-0100</a></li>
-                <li className="flex gap-3"><Mail size={15} className="text-orange-400 mt-0.5 shrink-0" /><a href="mailto:info@ptroofing.com" className="text-slate-400 hover:text-white text-sm transition-colors">info@ptroofing.com</a></li>
+                <li className="flex gap-3"><Mail size={15} className="text-orange-400 mt-0.5 shrink-0" /><a href="mailto:info@HRroofing.com" className="text-slate-400 hover:text-white text-sm transition-colors">info@HRroofing.com</a></li>
                 <li className="flex gap-3"><MapPin size={15} className="text-orange-400 mt-0.5 shrink-0" /><span className="text-slate-400 text-sm">Greater Austin Area, TX</span></li>
               </ul>
               <button onClick={() => setModal(true)}
@@ -892,7 +892,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-slate-500 text-sm">
-            <p>© {new Date().getFullYear()} PT Roofing and Renovations. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Horizon Home Remodeling . All rights reserved.</p>
             <div className="flex items-center gap-2">
               <Shield size={13} className="text-orange-500" />
               <span>Licensed &amp; Insured in Texas</span>
